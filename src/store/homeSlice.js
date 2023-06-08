@@ -4,18 +4,18 @@ import { createSlice } from '@reduxjs/toolkit'
 export const homeSlice = createSlice({
   name: 'home',
   initialState: {
-   url: {},
-   genres: {} 
+    url: {},
+    genres: {}
   },
-  
+
   // reducer ke ander saare actions hai 
   reducers: {
-    getApiConfiguration: (state, action) =>{
-        state.url = action.payload;
+    getApiConfiguration: (state, action) => {
+      state.url = action.payload;
     },
 
-    getGenres: (state, action) =>{
-        state.genres = action.payload;
+    getGenres: (state, action) => {
+      state.genres = action.payload;
     }
 
   },

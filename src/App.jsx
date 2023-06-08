@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+
+// import fetchDataFromApi variable , or directly import so , need to use {  }
 import { fetchDataFromApi } from './utils/api';
 
 import { BrowserRouter , Routes, Route} from 'react-router-dom';
@@ -16,6 +18,7 @@ import Explore from './pages/explore/Explore';
 import pageNotFound from './pages/404/pageNotFound';
 
 function App() {
+  
   const dispatch = useDispatch();
   const { url } = useSelector((state) => state.home);
   console.log(url);
@@ -25,7 +28,7 @@ function App() {
     genresCall();
   }, []);
 
-
+   
   const fetchApiConfig = () => {
     fetchDataFromApi('/configuration')
        .then((res) => {
